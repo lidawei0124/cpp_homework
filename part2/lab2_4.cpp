@@ -14,8 +14,8 @@ int main()
     };
     time timeofnow;
     cout << "input time of now (y/m/d/h/m/s): " << endl;
-    cin >> timeofnow.y >> timeofnow.m1 >> timeofnow.d >> timeofnow.h >> timeofnow.m2 >> timeofnow.s;
-    cout << timeofnow.y << '/' << timeofnow.m1 << '/' <<timeofnow.d<<':';
-    cout<<timeofnow.h<<':'<< timeofnow.m2 <<':'<< timeofnow.s<<endl;
+    cin >> timeofnow.y >> timeofnow.m1 >> timeofnow.d >> timeofnow.h >> timeofnow.m2 >> timeofnow.s;//输入
+    cout << timeofnow.y << '/' << timeofnow.m1 << '/' <<timeofnow.d<<':';//输出
+    cout<<timeofnow.h<<':'<< timeofnow.m2 <<':'<< timeofnow.s<<endl;//输出
     return 0;
 }
