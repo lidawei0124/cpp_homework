@@ -112,14 +112,14 @@ class GROUP
 int main()
 {
     PEOPLE p1(113), p2(116), p3(4), p4(999);
-    GROUP workgroup(p1, p2);
+    GROUP workgroup(p1, p2);//先组合，再录入信息
     workgroup.info();
     workgroup.show();
-    GROUP g1(workgroup);
+    GROUP g1(workgroup);//拷贝
     g1.show();
     p3.info();
     p4.info();
-    GROUP g2(p3, p4);
+    GROUP g2(p3, p4);//先录入人员信息，再组合
     g2.show();
     return 0;
 }

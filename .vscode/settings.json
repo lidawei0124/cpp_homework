@@ -21,6 +21,8 @@
     "files.associations": {
         "iostream": "cpp",
         "istream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "string": "cpp",
+        "xstring": "cpp"
     }, // 格式化时调整include的顺序（按字母排序）
 }
