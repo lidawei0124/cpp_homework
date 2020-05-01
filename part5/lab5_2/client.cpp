@@ -1,12 +1,12 @@
-#include"client.h"
+#include "client.h"
 
-void CLIENT::name(char n)
+void Client::ChangeServerName(char name)
 {
-    CLIENT::servername = n;
-    CLIENT::num++;
+    Client::ServerName = name;
+    Client::ClientNum++;
 }
 
-int CLIENT::getnum()
+int Client::getClientNum()
 {
-    return CLIENT::num;
+    return Client::ClientNum;
 }

@@ -1,15 +1,13 @@
 #ifndef CLIENT_H_
 #define CLIENT_H_
-#include<iostream>
-using namespace std;
 
-class CLIENT
+class Client
 {
-        static int num;
-        static char servername;
-    public:
-        static void name(char n);
-        static int getnum();
+    static char ServerName;
+    static int ClientNum;
+public:
+    static void ChangeServerName(char name);
+    static int getClientNum();
 };
 
 #endif

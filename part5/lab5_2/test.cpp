@@ -1,13 +1,17 @@
-#include "client.h"
+#include<iostream>
+#include"client.h"
+using namespace std;
 
-int CLIENT::num=0; //类内static 变量调用要加 类名：：变量 调用
-char CLIENT::servername = 'a';
+int Client::ClientNum = 0;
+char Client::ServerName = 'a';
+
 int main()
 {
-    CLIENT p1;
-    p1.name('b');
-    cout << p1.getnum() << endl;
-    // CLIENT p2(p1);
-    // CLIENT::changeservername;
+    Client c1;
+    c1.ChangeServerName('b');
+    cout << c1.getClientNum() << endl;
+    Client c2;
+    c2.ChangeServerName('b');
+    cout << c2.getClientNum() << endl;
     return 0;
 }
