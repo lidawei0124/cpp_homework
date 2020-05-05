@@ -23,6 +23,8 @@
         "istream": "cpp",
         "ostream": "cpp",
         "string": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "xiosbase": "cpp",
+        "xlocale": "cpp"
     }, // 格式化时调整include的顺序（按字母排序）
 }

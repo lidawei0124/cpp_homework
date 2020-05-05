@@ -1,13 +1,11 @@
 #include "acount.h"
 
-Acount::Acount(Date day,char *id1,float rate1)//构造函数
+Acount::Acount(char *id1,float rate1)//构造函数
 {
     id = id1;
     rate = rate1;
     sum = 0;
-    balance = 0;
-    lastsavedate = day;
-    day.show();
+    lastsavedate = 1;
     cout << "acount " << id << " created" << endl;
 }
 void Acount::show()
@@ -16,37 +14,26 @@ void Acount::show()
     cout << "balance: " << balance << " ";
     cout << "rate: " << rate << endl;
 }
-void Acount::update(Date day)
+void Acount::update(int day)
 {
-
     sum += balance * (day - lastsavedate);//更新日余额累计sum
     lastsavedate = day;//更新存款变动记录lastsavedate
 }
-void Acount::deposit(Date day,float money,string info)
+void Acount::deposit(int day,float money)
 {
     update(day);//更新sum和lastsavedate
     balance += money;
-    day.show();
-    cout <<id<<":"<< balance << "+" << money <<info<< endl;
-    total += money;
+    cout <<id<<":"<< balance << "+" << money << endl;
 }
-void Acount::withdraw(Date day,float money,string info)
+void Acount::withdraw(int day,float money)
 {
     update(day);//更新sum和lastsavedate
     balance -= money;
-    day.show();
-    cout <<id<<":"<< balance << "-" << money <<info<< endl;
-    total -= money;
+    cout <<id<<":"<< balance << "-" << money << endl;
 }
-void Acount::settle(Date day)
+void Acount::settle(int day)
 {
     update(day);//更新sum和lastsavedate
-    float tem = sum * rate / 365;//年利
-    balance += tem;//年利存入余额
+    balance += sum * rate/365;//年利率存入余额
     sum = 0;//重置日余额累计
-    total += tem;//年利存入total
-}
-void Acount::gettotal()
-{
-    cout << "total: " << total << endl;
 }
