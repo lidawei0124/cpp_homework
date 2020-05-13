@@ -1,0 +1,28 @@
+
+o 234 0.015
+o 142 0.015
+p c23 0.0005 10000 50
+c 5
+d 0 5000 salary
+c 15
+w 2 2000 buy a sell
+c 25
+d 1 10000 selll a stock
+n
+d 2 2016 repay credit
+c 5 
+d 0 5500 saslary
+n
+s
+e
+
+
+s
+w 2 20000 buy a car
+e
+
+
+s
+s
+e
+
